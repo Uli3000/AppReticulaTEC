@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/itlaguna.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Planes de Estudio</title>
+</head>
+<body class="bg-dark-subtle bg-gradient">
+    <nav class="navbar navbar-expand-lg nav-underline bg-dark px-2 ">
+        <div class="container-fluid">
+        <i class="navbar-brand text-warning bi bi-clipboard-data-fill icono-nav"></i>
+          <a class="navbar-brand text-warning" href="inicioMatPE.php">App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mx-auto" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="Materias.html">Materias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light active" aria-current="page" href="#">Planes de estudios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="selectPE.html">Reticula</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="Login/destruirSesion.php">Cerrar sesion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <form class="container bg-light pb-3 rounded mt-4 mb-4">
+        <p class="pt-3"><b>Datos para agregar un nuevo plan de estudio:</b></p>
+
+        <div class="row d-flex align-items-center">
+        <div class="col-md-6 ">
+        <p>Si quiere crear una especialidad para un plan de estudios ya existente, seleccione aqui:</p>
+        </div>
+        <div class="col-md-6">
+        <select name="comboPEAgregar" id="comboPEAgregar" class="form-select mb-2"></select>
+        </div>
+        </div>
+      
+        <div class="form-floating mb-3">
+        <input type="text" id="agregarCvePE" name="agregarCvePE" class="form-control" placeholder="Clave del plan de estudio:">
+        <label for="agregarCvePE">Clave del plan de estudio:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+        <input type="text" id="agregarNombrePE" name="agregarNombrePE" class="form-control" placeholder="Nombre del plan de estudio:">
+        <label for="agregarNombrePE">Nombre del plan de estudio:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+        <input type="text" id="agregarCveEspecialidad" name="agregarCveEspecialidad" class="form-control" placeholder="Clave de la especialidad:">
+        <label for="agregarCveEspecialidad">Clave de la especialidad:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+        <input type="text" id="agregarNombreEspecialidad" name="agregarNombreEspecialidad" class="form-control" placeholder="Nombre de la especialidad:">
+        <label for="agregarNombreEspecialidad">Nombre de la especialidad:</label>
+        </div>
+
+        <div class="d-grid gap-2 col-4 mx-auto">
+        <button type="button" id="btnAgregar" class="btn btn-warning">Agregar</button>
+        </div>
+        
+    </form>
+    <hr>
+    <form class="container bg-light pb-3 rounded mt-4 mb-4">
+        <p class="pt-3"><b>Selecciona el plan de estudio a eliminar o actualizar</b></p>
+
+        <div class="input-group mb-3">
+        <select name="comboPE" id="comboPE" class="form-select"></select>
+        <select name="comboEspecialidad" id="comboEspecialidad" class="form-select"></select>
+        <button type="button" disabled id="btnEliminar" class="btn btn-outline-danger btn-outline-secondary"><i class="bi bi-trash"></i></button>
+        </div>
+
+        <!--
+        <label for="actualizarCveMateria">Clave:</label>
+        <input type="text" id="actualizarCveMateria" name="actualizarCveMateria">
+        -->
+        <div class="form-floating mb-3">
+        <input type="text" id="actualizarNombrePE" name="actualizarNombrePE" class="form-control" placeholder="Nombre del plan de estudio:">
+        <label for="actualizarNombrePE">Nombre del plan de estudio:</label>
+        </div>
+
+        <div class="form-floating mb-3">
+        <input type="text" id="actualizarNombreEspecialidad" name="actualizarNombreEspecialidad" class="form-control" placeholder="Nombre de la especialidad:">
+        <label for="actualizarNombreEspecialidad">Nombre de la especialidad:</label>
+        </div>
+
+        <div class="d-grid gap-2 col-4 mx-auto">
+        <button type="button" id="btnActualizar" class="btn btn-warning">Actualizar</button>
+        </div>
+    </form>
+    <!--
+    <button onclick="window.location.href = 'inicioMatPE.html'">Regresar</button>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/MateriasPlanesDeEstudiosDBA/Scripts/planesDeEstudios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/itlaguna.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Materias</title>
+</head>
+<body class="bg-dark-subtle bg-gradient">
+    <nav class="navbar nav-underline navbar-expand-lg bg-dark px-2 ">
+        <div class="container-fluid">
+        <i class="navbar-brand text-warning bi bi-clipboard-data-fill icono-nav"></i>
+          <a class="navbar-brand text-warning" href="inicioMatPE.php">App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse mx-auto" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-light active" aria-current="page" href="#">Materias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="PlanesDeEstudios.html">Planes de estudios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="selectPE.html">Reticula</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="Login/destruirSesion.php">Cerrar sesion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <form class="container bg-light pb-3 rounded mb-4">
+        <p class="mt-4 pt-3"><b>Datos para agregar una materia nueva:</b></p>
+        <div class="form-floating input-group mb-3">
+            <input type="text" class="form-control" id="agregarCveMateria" placeholder="Clave de la materia">
+            <label for="agregarCveMateria">Clave</label>
+            <button type="button" class="btn btn-lg btn-warning" data-bs-toggle="popover" data-bs-title="Info" data-bs-content="La clave no puede ser vacia y de un maximo de 10 caracteres"><i class="bi bi-info-circle"></i></button>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="agregarNombreMateria" placeholder="Nombre de la materia">
+            <label for="agregarNombreMateria">Nombre</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="agregarCredT" placeholder="Creditos teoricos de la materia">
+            <label for="agregarCredT">Creditos teoricos</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="agregarCredP" placeholder="Creditos practicos de la materia">
+            <label for="agregarCredP">Creditos practicos</label>
+          </div>
+          <div class="d-grid gap-2 col-4 mx-auto">
+        <button type="button" class="btn btn-outline-warning" id="btnAgregar">Agregar</button>
+          </div>
+      </form>
+    <hr>
+    <form class="container bg-light pb-3 rounded mb-4">
+        <p class="mt-4 pt-3"><b>Selecciona la materia a eliminar o actualizar</b></p>
+
+        <div class="input-group mb-3">
+            <select class="form-select" aria-label="Floating label select example" name="comboMaterias" id="comboMaterias">
+            </select>
+            <button type="button" id="btnEliminar" class="btn btn-outline-danger btn-outline-secondary"><i class="bi bi-trash"></i></button>
+          </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="actualizarNombreMateria" placeholder="Nombre de la materia">
+            <label for="actualizarNombreMateria">Nombre</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="actualizarCredT" placeholder="Creditos teoricos de la materia">
+            <label for="actualizarCredT">Creditos teoricos</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="actualizarCredP" placeholder="Creditos practicos de la materia">
+            <label for="actualizarCredP">Creditos practicos</label>
+        </div>
+        <div class="d-grid gap-2 col-4 mx-auto">
+        <button type="button" class="btn btn-outline-warning" id="btnActualizar">Actualizar</button>
+        </div>
+    </form>
+    <!--
+    <hr>
+    <button onclick="window.location.href = 'inicioMatPE.html'">Regresar</button>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/MateriasPlanesDeEstudiosDBA/Scripts/materias.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+:root {
+    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.904);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    background-image: url(asset/wallpaper.webp);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    max-width: 900px;
+    transition: 1s;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.information {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #151F2B;
+    border-top-left-radius: 20px;
+
+}
+
+#btnSignIn,
+#btnSignUp {
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(29, 91, 145);
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#btnSignIn,
+#btnSignUp:hover {
+    transform: translateY(2px);
+    border: none;
+    background-color: rgb(98, 145, 185);
+    cursor: pointer;
+}
+
+.icon {
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    font-size: 50px;
+    border: 4px solidrgb(29, 91, 145);
+    border-radius: 100px;
+    padding: 30px 20px;
+    background-color: rgb(29, 91, 145);
+    box-shadow: var(--box-shadow);
+}
+
+#logo {
+    width: 150px;
+    margin: 10px;
+
+}
+
+.info_child {
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.info_child h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.info_child p {
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.boton {
+    border: solid;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+}
+
+
+/*panel der*/
+.form_information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+/*parafo_login*/
+.form_information_child {
+    padding: 0 30px;
+}
+
+.form_information_child h2 {
+    color: black;
+}
+
+.form_information_child p {
+    color: #555;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+i {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/*Fotmulario*/
+.campo_login {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: none;
+    margin-bottom: 10px;
+
+}
+
+.label_titulo {
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+    text-align: left;
+    padding-left: 60px;
+}
+
+.input {
+    width: 80%;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid var(--color_base);
+    cursor: text;
+    outline: transparent;
+    padding-left: 5px;
+    transition: all .1s ease;
+    border-radius: 3px;
+
+}
+
+.icono {
+    color: var(--color_base);
+    margin: 0 15px 5px 0;
+    font-size: small;
+    color: rgb(29, 91, 145);
+    border: solid 1px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.input:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 10px rgba(99, 176, 248, 0.692);
+    border-bottom: #222121 solid 1px;
+    margin: 10px 0;
+}
+
+#inicio {
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(29, 91, 145);
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#inicio:hover {
+    transition: all 1s ease;
+    transform: translateY(2px);
+    border: none;
+    box-shadow: var(--box-shadow);
+    background-color: rgb(54, 121, 179);
+    cursor: pointer;
+}
+
+.hide {
+    position: absolute;
+    transform: translateY(-300%);
+}
